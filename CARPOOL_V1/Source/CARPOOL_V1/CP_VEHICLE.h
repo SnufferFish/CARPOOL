@@ -8,11 +8,14 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class CARPOOL_V1_API ACP_VEHICLE : public ACARPOOL_BASE
 {
 	GENERATED_BODY()
 	
+public:
+
+	EVehicleType VEHICLE_Type;
 	
 	
 	

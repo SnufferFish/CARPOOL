@@ -3,8 +3,14 @@
    # !/foo
   #  /foo/*
   #  !/foo/bar
+#dirs to save
+
+!CARPOOL_V1/Content/test
 #dirs to ignore
-CARPOOL_V1/Content
+!CARPOOL_V1/Content
+CARPOOL_V1/Content/*
+!CARPOOL_V1/Content/Blueprints
+
 CARPOOL_V1/Intermediate
 CARPOOL_V1/Binaries
 CARPOOL_V1/Saved

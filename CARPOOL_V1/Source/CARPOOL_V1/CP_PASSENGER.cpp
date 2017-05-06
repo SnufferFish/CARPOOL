@@ -6,3 +6,11 @@
 
 
 
+ACP_PASSENGER::ACP_PASSENGER()
+{
+	//Create dummy root scene component
+	PASSENGER_Root = CreateDefaultSubobject<USceneComponent>(TEXT("PASSENGER_Root"));
+	RootComponent = PASSENGER_Root;
+
+	PASSENGER_Avatar = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Avatar"));
+}
