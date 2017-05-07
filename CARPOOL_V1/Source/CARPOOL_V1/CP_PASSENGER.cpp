@@ -15,3 +15,95 @@ ACP_PASSENGER::ACP_PASSENGER()
 
 	PASSENGER_Avatar = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Avatar"));
 }
+
+void ACP_PASSENGER::InitiatePassenger()
+{
+	int iName = (FMath::Rand() % 4) + 2;
+	switch (iName)
+	{
+	case 2:
+	{
+		PASSENGER_Name = EPassengerName::BILL;
+		break;
+	}
+	case 3:
+	{
+		PASSENGER_Name = EPassengerName::FRANK;
+		break;
+	}
+
+	case 4:
+	{
+		PASSENGER_Name = EPassengerName::JIM;
+		break;
+	}
+	case 5:
+	{
+		PASSENGER_Name = EPassengerName::SARA;
+		break;
+	}
+	default:
+		break;
+
+	}//end of name assign switch
+
+	//Give passenger an age, health, crazy factor
+	PASSENGER_Age = (FMath::Rand() % 65) + 18;
+	PASSENGER_Health = 100;
+	CRAZY_FACTOR = (FMath::Rand() % 4) + 1; //4 being the most crazy
+
+
+	int iJob = (FMath::Rand() % 3) + 1;
+	switch (iJob)
+	{
+	case 1:
+	{
+		PASSENGER_Job = EPassengerJob::ENGINEER;
+		break;
+	}
+	case 2:
+	{
+		PASSENGER_Job = EPassengerJob::JANITOR;
+		break;
+	}
+	case 3:
+	{
+		PASSENGER_Job = EPassengerJob::SECRETARY;
+		break;
+	}
+
+	default:
+		break;
+
+	}//end of job switch
+
+	int iMood = (FMath::Rand() % 4) + 1;
+	switch (iMood)
+	{
+	case 1:
+	{
+		PASSENGER_Mood = EPassengerMood::HAPPY;
+		break;
+	}
+	case 2:
+	{
+		PASSENGER_Mood = EPassengerMood::SAD;
+		break;
+	}
+	case 3:
+	{
+		PASSENGER_Mood = EPassengerMood::MAD;
+		break;
+	}
+	case 4:
+	{
+		PASSENGER_Mood = EPassengerMood::PSYCHOTIC;
+		break;
+	}
+	default:
+		break;
+	}//end of mood switch
+
+
+
+}

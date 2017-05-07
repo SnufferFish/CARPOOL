@@ -54,6 +54,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Material)
 	class UMaterial* PASSENGER_Material;
 
+protected:
+
+	//To be called from Construction script when spawning derived BP's
+	UFUNCTION(BlueprintCallable, Category = "Initiate Things")
+	void InitiatePassenger();
+
 
 
 
