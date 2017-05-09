@@ -39,7 +39,8 @@ public:
 
 	//Array to hold pointers to passengers
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<TSubclassOf<ACP_PASSENGER*>> aPassengersInVehicle;
+	TArray<TSubclassOf<ACP_PASSENGER>> aPassengersInVehicle; //This stil does not work???TArray<TSubclassOf<class ACP_PASSENGER*>> aPassengersInVehicle; but works with non-pointer
+			
 
 protected:
 	//To be called from Construction script when spawning derived BP's
