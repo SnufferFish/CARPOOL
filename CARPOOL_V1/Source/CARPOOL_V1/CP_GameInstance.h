@@ -32,7 +32,13 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CharacterSelectValue)
 	int32 CharacterSelectValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText PlayerNameFromHUD = FText::GetEmpty();
+
 	
+	
+
 	
 	
 };
