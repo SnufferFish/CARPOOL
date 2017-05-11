@@ -12,6 +12,9 @@ UCLASS()
 class CARPOOL_V1_API ACARPOOL_V1GameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
+
+public:
+	ACARPOOL_V1GameModeBase();
 	
 	
 	

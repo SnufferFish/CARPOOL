@@ -12,7 +12,8 @@ enum class EVehicleType : uint8
 	CAR = 1 UMETA(DisplayName = "Car"),
 	VAN = 2 UMETA(DisplayName = "Van"),
 	BUS = 3 UMETA(DisplayName = "Bus"),
-	MOTORCYCLE = 4 UMETA(DisplayName = "Motor Cycle")
+	MOTORCYCLE = 4 UMETA(DisplayName = "Motor Cycle"),
+	BLANK = 100 UMETA(DisplayName = "Blank")
 };
 
 UENUM(BlueprintType)
@@ -22,7 +23,8 @@ enum class EPassengerName : uint8
 	BILL = 2 UMETA(DisplayName = "Bill"),
 	SARA = 3 UMETA(DisplayName = "Sara"),
 	JIM = 4 UMETA(DisplayName = "JIM"),
-	FRANK = 5 UMETA(DisplayName = "Frank")
+	FRANK = 5 UMETA(DisplayName = "Frank"),
+	BLANK = 100 UMETA(DisplayName = "Blank")
 };
 
 UENUM(BlueprintType)
@@ -30,7 +32,8 @@ enum class EPassengerJob : uint8
 {
 	ENGINEER = 1 UMETA(DisplayName = "Engineer"),
 	SECRETARY = 2 UMETA(DisplayName = "Secretary"),
-	JANITOR = 3 UMETA(DisplayName = "Janitor")
+	JANITOR = 3 UMETA(DisplayName = "Janitor"),
+	BLANK = 100 UMETA(DisplayName = "Blank")
 };
 
 UENUM(BlueprintType)
@@ -39,7 +42,8 @@ enum class EPassengerMood : uint8
 	HAPPY = 1 UMETA(DisplayName = "Happy"),
 	SAD = 2 UMETA(Display = "SAD"),
 	MAD = 3 UMETA(Display = "MAD"),
-	PSYCHOTIC = 4 UMETA(DisplayName = "Psychotic")
+	PSYCHOTIC = 4 UMETA(DisplayName = "Psychotic"),
+	BLANK = 100 UMETA(DisplayName = "Blank")
 };
 
 

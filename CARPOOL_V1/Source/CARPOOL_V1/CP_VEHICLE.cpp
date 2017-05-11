@@ -10,6 +10,7 @@ ACP_VEHICLE::ACP_VEHICLE()
 	RootComponent = VEHICLE_Root;
 
 	VEHICLE_Avatar = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Avatar"));
+	
 }
 
 void ACP_VEHICLE::InitiateVehicle()

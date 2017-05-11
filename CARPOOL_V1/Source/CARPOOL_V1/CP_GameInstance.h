@@ -31,10 +31,15 @@ public:
 	UCP_GameInstance(const FObjectInitializer& ObjectInitializer);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CharacterSelectValue)
-	int32 CharacterSelectValue;
+	EPassengerJob SelectedJob;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText PlayerNameFromHUD = FText::GetEmpty();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 PassengerAge;
+
+	
 
 	
 	
