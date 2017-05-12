@@ -7,18 +7,26 @@
 
 
 
-ACP_PASSENGER::ACP_PASSENGER()
+ACP_PASSENGER::ACP_PASSENGER(const FObjectInitializer& ObjectInitializer)
+	:Super(ObjectInitializer)
 {
 	//Create dummy root scene component
 	PASSENGER_Root = CreateDefaultSubobject<USceneComponent>(TEXT("PASSENGER_Root"));
 	RootComponent = PASSENGER_Root;
 
 	PASSENGER_Avatar = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Avatar"));
+	PASSENGER_Material = CreateDefaultSubobject<UMaterial>(TEXT("Material"));
+
+	//Give passenger an age, health, crazy factor
+	PASSENGER_Age = (FMath::Rand() % 50) + 18;
+	PASSENGER_Health = 100;
+	CRAZY_FACTOR = (FMath::Rand() % 4) + 1; //4 being the most crazy
+	InitiatePassenger();
 }
 
 void ACP_PASSENGER::InitiatePassenger()
 {
-	int iName = (FMath::Rand() % 4) + 2;
+	/*int iName = (FMath::Rand() % 4) + 2;
 	switch (iName)
 	{
 	case 2:
@@ -46,12 +54,10 @@ void ACP_PASSENGER::InitiatePassenger()
 		break;
 
 	}//end of name assign switch
+	*/
 
-	//Give passenger an age, health, crazy factor
-	PASSENGER_Age = (FMath::Rand() % 65) + 18;
-	PASSENGER_Health = 100;
-	CRAZY_FACTOR = (FMath::Rand() % 4) + 1; //4 being the most crazy
 
+	PASSENGER_Age = (FMath::Rand() % 50) + 18;
 
 	int iJob = (FMath::Rand() % 3) + 1;
 	switch (iJob)

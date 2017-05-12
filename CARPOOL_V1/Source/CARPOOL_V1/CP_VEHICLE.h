@@ -18,7 +18,7 @@ class CARPOOL_V1_API ACP_VEHICLE : public ACARPOOL_BASE
 	class USceneComponent* VEHICLE_Root;
 	
 public:
-	ACP_VEHICLE();
+	ACP_VEHICLE(const FObjectInitializer& ObjectInitializer);
 
 	EVehicleType VEHICLE_Type;
 

@@ -22,7 +22,7 @@ enum class EPassengerName : uint8
 	PLAYER = 1 UMETA(DisplayName = "Player 1"),
 	BILL = 2 UMETA(DisplayName = "Bill"),
 	SARA = 3 UMETA(DisplayName = "Sara"),
-	JIM = 4 UMETA(DisplayName = "JIM"),
+	JIM = 4 UMETA(DisplayName = "Jim"),
 	FRANK = 5 UMETA(DisplayName = "Frank"),
 	BLANK = 100 UMETA(DisplayName = "Blank")
 };
@@ -56,6 +56,7 @@ class CARPOOL_V1_API ACARPOOL_BASE : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
+	ACARPOOL_BASE(const FObjectInitializer& ObjectInitializer);
 	ACARPOOL_BASE();
 
 protected:

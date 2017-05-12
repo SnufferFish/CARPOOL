@@ -21,7 +21,7 @@ ACP_PLAYERCARPOOL::ACP_PLAYERCARPOOL()
 	PlayerCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("GameCamera"));
 	PlayerCamera->SetupAttachment(PlayerCameraSpringArm, USpringArmComponent::SocketName);
 
-	VEHICLE_Avatar = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Avatar"));
+	//VEHICLE_Avatar = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Avatar"));
 
 
 

@@ -21,7 +21,7 @@ class CARPOOL_V1_API ACP_PASSENGER : public ACARPOOL_BASE
 
 public:
 
-	ACP_PASSENGER();
+	ACP_PASSENGER(const FObjectInitializer& ObjectInitializer);
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Name)
@@ -54,7 +54,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Material)
 	class UMaterial* PASSENGER_Material;
 
-protected:
+
 
 	//To be called from Construction script when spawning derived BP's
 	UFUNCTION(BlueprintCallable, Category = "Initiate Things")
