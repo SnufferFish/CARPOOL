@@ -7,6 +7,7 @@
 #include "GameFramework/Pawn.h"
 #include "CP_PLAYERCARPOOL.generated.h"
 
+
 UCLASS(Blueprintable)
 class CARPOOL_V1_API ACP_PLAYERCARPOOL : public APawn
 {
@@ -40,9 +41,9 @@ public:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Material)
 	//class UMaterial* VEHICLE_Material;
 
-	//Number of seats in vehicle
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Seats)
-	int numSeats;
+	//Type of carpool player wants, this is also the difficulty level
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = CARPOOlType)
+	EVehicleType CARPOOL_Type;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Age)
 	int PLAYER_Age;
@@ -73,6 +74,10 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FText PlayerNameFromHUD = FText::GetEmpty();
+
+	//Vehicle member var
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ACP_VEHICLE* CP_PlayerVehicle;
 
 
 	
